@@ -5,8 +5,8 @@ SmoreBot is a Discord bot written by me (Andrew Tran) in my free time. It is wri
 - Automatic Command Registration
 - 3 Types of Commands:
   - Commands activated if starting with X
-  - Commands activated if matching regex
-  - Commands activated if matching exactly
+  - Commands activated if matching regex X
+  - Commands activated if matching exactly X
 - Console commands, works in IDE's terminals too
 - ENUM based Rank System
 - Configuration Manager/API
