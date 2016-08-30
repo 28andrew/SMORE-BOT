@@ -23,29 +23,7 @@ public class SmoreBot {
     public String tokenCensored = "";
     private ArrayList<CommandEntity> commands = new ArrayList<>();
 
-    public static BufferedReader getConsole() {
-        return console;
-    }
-
-    private static BufferedReader console;
-
-    public Timer getTimer() {
-        return timer;
-    }
-
-    public void setTimer(Timer timer) {
-        this.timer = timer;
-    }
-
     private Timer timer;
-
-    public Random getRandom() {
-        return random;
-    }
-
-    public void setRandom(Random random) {
-        this.random = random;
-    }
 
     private Random random;
 
@@ -55,9 +33,6 @@ public class SmoreBot {
 
     private String currentGame;
 
-    public ArrayList<CommandEntity> getCommands() {
-        return commands;
-    }
 
     public static void main(String[] args){
 
@@ -152,6 +127,32 @@ public class SmoreBot {
 
     public void setTokenCensored(String tokenCensored) {
         this.tokenCensored = tokenCensored;
+    }
+
+    public ArrayList<CommandEntity> getCommands() {
+        return commands;
+    }
+
+    public Random getRandom() {
+        return random;
+    }
+
+    public void setRandom(Random random) {
+        this.random = random;
+    }
+
+    public static BufferedReader getConsole() {
+        return console;
+    }
+
+    private static BufferedReader console;
+
+    public Timer getTimer() {
+        return timer;
+    }
+
+    public void setTimer(Timer timer) {
+        this.timer = timer;
     }
 
     public static SmoreBot getInstance() {
