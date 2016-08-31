@@ -14,11 +14,14 @@ import java.util.ArrayList;
 /**
  * @author Andrew Tran
  */
-@Command(command = "(@)?Smore(,) can (yo)?u .*", help = "Smore might be something for you", usage = "Smore, can you <something>")
+@Command(command = "(@)?Smore(,) can (yo)?u .*",
+        caseSensetive = false,
+        help = "Smore might be something for you",
+        usage = "Smore, can you <something>")
 public class CanYou implements RegexCommand {
     @Override
     public void handle(User user, Message message, MessageReceivedEvent event) {
-        String[] split = message.getStrippedContent().split(" ");
+        String[] split = message.getRawContent().split(" ");
         ArrayList<String> remainder1 = new ArrayList<>();
         for (Integer i = 0; i < split.length; i++){
             if (i >= 3){
