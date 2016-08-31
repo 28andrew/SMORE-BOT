@@ -262,9 +262,9 @@ public class SmoreBot {
             for (CommandEntity ce : commands){
                 if (ce.getAnnotation().requiredRank() == rank){
                     help += "\n#\n" + ce.getCommand().getClass().getSimpleName();
-                    help += "\n" + ce.getAnnotation().command();
-                    help += "\n" + ce.getAnnotation().usage();
-                    help += "\n" + ce.getAnnotation().help();
+                    help += "\nRAW COMMAND: " + ce.getAnnotation().command();
+                    help += "\nUSAGE: " + ce.getAnnotation().usage();
+                    help += "\nHELP: " + ce.getAnnotation().help();
                     help += "\n#\n";
                 }
             }
