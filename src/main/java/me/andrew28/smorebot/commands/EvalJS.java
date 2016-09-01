@@ -8,12 +8,9 @@ import me.andrew28.smorebot.util.MessageUtility;
 import net.dv8tion.jda.entities.Message;
 import net.dv8tion.jda.entities.User;
 import net.dv8tion.jda.events.message.MessageReceivedEvent;
-import org.apache.commons.lang.exception.ExceptionUtils;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
-import java.util.Arrays;
 
 /**
  * @author Andrew Tran
@@ -34,8 +31,7 @@ public class EvalJS implements StartsWithCommand{
         try {
             result = engine.eval(remainder);
             message.getChannel().deleteMessageById("220294758856130560");
-        } catch (ScriptException e) {
-            MessageUtility.reply(message, "Line Number: " + e.getLineNumber());
+        } catch (Exception e) {
             MessageUtility.reply(message, "Error: " + e.getMessage());
             return;
         }
